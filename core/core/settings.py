@@ -40,6 +40,8 @@ INSTALLED_APPS = [
 
     "rest_framework",
     "corsheaders",
+    "rest_framework.authtoken",
+    "todo",
 ]
 
 MIDDLEWARE = [
@@ -130,3 +132,10 @@ CORS_ORIGIN_WHITELIST = [
     # 'http://localhost:3000', # default for react
     'http://localhost:5173', # default for vite+react
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+}
+
